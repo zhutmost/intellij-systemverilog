@@ -1,33 +1,80 @@
-# Sample IntelliJ platform plugin written in Scala
+<div>
+<img src="https://raw.githubusercontent.com/zhutmost/intellij-systemverilog/main/src/main/resources/META-INF/pluginIcon.svg" alt="Logo" align="left" width="40" height="40"/>
+<h1 align="left"> SystemVerilog Language Server for Intellij IDEA </h1>
+</div>
 
-[![JetBrains team project](http://jb.gg/badges/team.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+![Build](https://github.com/zhutmost/intellij-systemverilog/workflows/Build/badge.svg)
+[![Version](https://img.shields.io/jetbrains/plugin/v/com.zhutmost.systemverilog.svg)](https://plugins.jetbrains.com/plugin/com.zhutmost.systemverilog)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/com.zhutmost.systemverilog.svg)](https://plugins.jetbrains.com/plugin/com.zhutmost.systemverilog)
+<!-- Plugin description -->
+This plugin integrates SystemVerilog language servers (LSP) into Intellij IDEA, which enables on-the-fly syntax linting.
+It supports multiple language servers, including:
+- [Verible](https://github.com/chipsalliance/verible) by ChipAlliance
+- [Svls](https://github.com/dalance/svls) by @dalance
+- Custom LSP (You can specify your own LSP binary)
 
-This is an example IJ plugin written in Scala and managed by SBT.
+## 📦 Requirements
 
-Apart from basic IJ plugin structure this project also provides some example code to play with and demonstrate some IntelliJ platform API features.
+#### 1. Install a SystemVerilog Language Server
 
-Extended documentation on the build features such as packaging the artifact, uploading to plugin marketplace, etc. is covered by
-the [sbt-idea-plugin](https://github.com/JetBrains/sbt-idea-plugin) readme
+Before starting, you need to install a LSP binary, and add it to your PATH environment variable.
+For example, you can download Verible bianry `verible-verilog-ls` from [its GitHub Release](https://github.com/chipsalliance/verible/releases).
 
-## Quick Start
+#### 2. Intellij IDEA Ultimate
 
-- Open the `build.sbt` file in IntelliJ IDEA as a project
-- To run your plugin, run or debug the `myAwesomeFramework` run configuration
+Only Intellij IDEA Ultimate supports LSP, so you cannot use this plugin with the Community version.
 
-## Example build features
+Currently, the language server protocol (LSP) support for Jetbrains IDEs is still in beta (View [JetBrains' Blog](https://blog.jetbrains.com/platform/2023/07/lsp-for-plugin-developers/) for more details).
 
-- `intellijBuild` key in build.sbt contains version of the dependency on IDEA, you can change it.
+#### 3. Third-party SystemVerilog Plugin (Optional but Recommended)
 
-- `intellijPlugins` key in build.sbt contains a dependency on the "Properties" IJ plugin
+This plugin does NOT include syntax highlighting. So you may need to install another SystemVerilog plugin
+`studio.edaphic.sv` from [Jetbrains Marketplace](https://plugins.jetbrains.com/plugin/10695-systemverilog).
 
-- there's an external library dependency that will be packaged into your plugin distribution
+Although this plugin itself is free, the above third-party plugin and the Intellij IDEA Ultimate version are both paid, so you need to pay for them. You can [apply for free licenses](https://www.jetbrains.com/community/education/#students) for education or open-source proposes.
 
-- Don't forget to replace the plugin name in build.sbt. You also need to change name in resources/META-INF/plugin.xml.
+## ⚙️ Configuration
 
-## Example plugin components
+Just add the LSP binaries to your PATH environment variable.
+To specify a LSP, You can set the plugin settings in:
 
-- `PopupDialogAction` creates an action under the "Tools" menu
-- `SimpleCompletionContributor` adds the "HELLO" completion item to the values of the properties files
-- `FileOpenedListener` shows a popup when a file is opened in the editor
-- `ApplicationHelloService` and `ProjectHelloService` show examples of IJ platform service components
-- `MyToolWindowFactory` creates a new ToolWindow at the bottom of the window
+ <kbd>Settings/Preferences</kbd> > <kbd>Tools</kbd> > <kbd>SystemVerilog Plus</kbd>.
+ 
+![Settings](https://raw.githubusercontent.com/zhutmost/intellij-systemverilog/main/img/settings.jpg)
+
+ Then restart your Intellij IDEA, and see the LSP is activated:
+
+![LSP status](https://raw.githubusercontent.com/zhutmost/intellij-systemverilog/main/img/status.jpg)
+
+Some LSP may need extra configuration files, you can find them in their READMEs.
+
+### Verible
+
+### Linting on the Fly
+![Verible linting demo](https://raw.githubusercontent.com/zhutmost/intellij-systemverilog/main/img/demo-linter-verible.jpg)
+
+To custom your linting style, you can create a `.rules.verible_lint` file in your project root directory. You can find the linting rules in [Verible Linter Rule List](https://chipsalliance.github.io/verible/verilog_lint.html).
+
+### Go to Definition
+
+No configuration is needed. Just "Ctrl/Cmd + Click" on the identifier and the editor will jump to its declaration.
+
+For more details of Verible, please visit:
+- [Verible Linter README](https://github.com/chipsalliance/verible/tree/master/verilog/tools/lint)
+- [Verible LSP README](https://github.com/chipsalliance/verible/tree/master/verilog/tools/ls)
+
+## ⚠️ Know Issues
+
+The LSP support by JetBrains is still in beta, so the features of this plugin may not be stable.
+If you have any problems, please feel free to open an issue on [GitHub](https://github.com/zhutmost/intellij-systemverilog/issues).
+
+<!-- Plugin description end -->
+
+### About the Third-party Plugin
+
+Besides, the mentioned SystemVerilog plugin (`studio.edaphic.sv` ) is no longer maintained, and it is not compatible with the latest version of Intellij IDEA.
+So we provide a modified version of this plugin on [GitHub](https://github.com/zhutmost/intellij-systemverilog/releases/download/v0.0.1/SystemVerilog.zip). You can choose to install this plugin manually:
+
+<kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+
+They may obey their license (although it is not maintained), so you can choose to use it or not.

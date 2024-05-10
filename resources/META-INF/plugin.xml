@@ -11,9 +11,26 @@
     <depends>com.intellij.properties</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <notificationGroup displayType="BALLOON" id="My Plugin Notification" />
-        <toolWindow factoryClass="org.jetbrains.scala.samples.ui.MyToolWindowFactory" id="MyToolWindow" anchor="bottom"/>
-        <completion.contributor implementationClass="org.jetbrains.scala.samples.completion.SimpleCompletionContributor" language="Properties"/>
+<!--        <fileType-->
+<!--            name="SystemVerilog"-->
+<!--            implementationClass="com.zhutmost.systemverilog.language.VerilogFileType$"-->
+<!--            fieldName="INSTANCE"-->
+<!--            language="SystemVerilog"-->
+<!--            extensions="sv;svh"/>-->
+
+<!--        <lang.commenter-->
+<!--            language="SystemVerilog"-->
+<!--            implementationClass="com.zhutmost.systemverilog.commenter.VerilogCommenter"/>-->
+
+        <platform.lsp.serverSupportProvider implementation="com.zhutmost.systemverilog.lsp.VerilogLspServerSupportProvider"/>
+
+        <applicationConfigurable
+                parentId="tools"
+                instance="com.zhutmost.systemverilog.settings.AppSettingsConfigurable"
+                id="com.zhutmost.systemverilog.settings.AppSettingsConfigurable"
+                displayName="SystemVerilog Plus"/>
+        <applicationService
+                serviceImplementation="com.zhutmost.systemverilog.settings.AppSettingsState"/>
     </extensions>
 
 </idea-plugin>
