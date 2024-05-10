@@ -1,5 +1,5 @@
 <div>
-<img src="https://raw.githubusercontent.com/zhutmost/intellij-systemverilog/main/src/main/resources/META-INF/pluginIcon.svg" alt="Logo" align="left" width="40" height="40"/>
+<img src="https://raw.githubusercontent.com/zhutmost/intellij-systemverilog/main/resources/META-INF/pluginIcon.svg" alt="Logo" align="left" width="40" height="40"/>
 <h1 align="left"> SystemVerilog Language Server for Intellij IDEA </h1>
 </div>
 
@@ -44,7 +44,7 @@ To specify a LSP, You can set the plugin settings in:
 
  Then restart your Intellij IDEA, and see the LSP is activated:
 
-![LSP status](https://raw.githubusercontent.com/zhutmost/intellij-systemverilog/main/img/status.jpg)
+![LSP status](https://raw.githubusercontent.com/zhutmost/intellij-systemverilog/main/img/lsp-status.jpg)
 
 Some LSP may need extra configuration files, you can find them in their READMEs.
 
