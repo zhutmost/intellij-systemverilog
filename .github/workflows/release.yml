@@ -1,0 +1,29 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: 21
+          distribution: temurin
+
+      - name: Generate artifact
+        run: sbt -v clean scalafmtCheckAll test packageArtifactZip
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            target/SystemVerilog*.zip
