@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.zhutmost.systemverilog</id>
     <name>SystemVerilog Plus by Zhutmost</name>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.3</version>
     <vendor>zhutmost</vendor>
 
     <description>

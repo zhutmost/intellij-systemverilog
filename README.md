@@ -3,7 +3,7 @@
 <h1 align="left"> SystemVerilog Language Server for Intellij IDEA </h1>
 </div>
 
-![Build](https://github.com/zhutmost/intellij-systemverilog/workflows/Build/badge.svg)
+![Build](https://github.com/zhutmost/intellij-systemverilog/actions/workflows/build.yml/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/com.zhutmost.systemverilog.svg)](https://plugins.jetbrains.com/plugin/com.zhutmost.systemverilog)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/com.zhutmost.systemverilog.svg)](https://plugins.jetbrains.com/plugin/com.zhutmost.systemverilog)
 <!-- Plugin description -->
