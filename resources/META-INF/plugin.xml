@@ -1,14 +1,13 @@
 <idea-plugin>
-    <id>me.and.co.my.awesome.framework</id>
-    <name>My Awesome Framework</name>
+    <id>com.zhutmost.systemverilog</id>
+    <name>SystemVerilog Plus by Zhutmost</name>
     <version>0.0.1-SNAPSHOT</version>
-    <vendor>Me and Co</vendor>
-
-    <description>A new plugin for IntelliJ platform written in Scala and built with SBT</description>
+    <vendor>zhutmost</vendor>
 
     <idea-version since-build="231.0"/>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.ultimate</depends>
     <depends>com.intellij.properties</depends>
 
     <extensions defaultExtensionNs="com.intellij">
