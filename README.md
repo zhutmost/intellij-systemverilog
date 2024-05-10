@@ -73,7 +73,7 @@ If you have any problems, please feel free to open an issue on [GitHub](https://
 ### About the Third-party Plugin
 
 Besides, the mentioned SystemVerilog plugin (`studio.edaphic.sv` ) is no longer maintained, and it is not compatible with the latest version of Intellij IDEA.
-So we provide a modified version of this plugin on [GitHub](https://github.com/zhutmost/intellij-systemverilog/releases/download/v0.0.1/SystemVerilog.zip). You can choose to install this plugin manually:
+So we provide a modified version of this plugin on [GitHub](https://github.com/zhutmost/intellij-systemverilog/releases/download/v0.0.1/studio.edaphic.sv.SystemVerilog.zip). You can choose to install this plugin manually:
 
 <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
