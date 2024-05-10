@@ -1,6 +1,6 @@
 import org.jetbrains.sbtidea.Keys._
 
-lazy val myAwesomeFramework =
+lazy val pluginIntellijSystemVerilog =
   project.in(file("."))
     .enablePlugins(SbtIdeaPlugin)
     .settings(

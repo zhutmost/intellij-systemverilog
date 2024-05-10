@@ -50,12 +50,12 @@ Some LSP may need extra configuration files, you can find them in their READMEs.
 
 ### Verible
 
-### Linting on the Fly
+#### Linting on the Fly
 ![Verible linting demo](https://raw.githubusercontent.com/zhutmost/intellij-systemverilog/main/img/demo-linter-verible.jpg)
 
 To custom your linting style, you can create a `.rules.verible_lint` file in your project root directory. You can find the linting rules in [Verible Linter Rule List](https://chipsalliance.github.io/verible/verilog_lint.html).
 
-### Go to Definition
+#### Go to Definition
 
 No configuration is needed. Just "Ctrl/Cmd + Click" on the identifier and the editor will jump to its declaration.
 
