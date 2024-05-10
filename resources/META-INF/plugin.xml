@@ -4,6 +4,11 @@
     <version>0.0.1-SNAPSHOT</version>
     <vendor>zhutmost</vendor>
 
+    <description>
+        This plugin integrates SystemVerilog language servers (LSP) into Intellij IDEA, which enables Linting On the Fly, Go to Definition and other features.
+        It supports multiple language servers, including: Verible, Svls and custom LSPs.
+    </description>
+
     <idea-version since-build="231.0"/>
 
     <depends>com.intellij.modules.platform</depends>
