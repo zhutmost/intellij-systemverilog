@@ -9,7 +9,7 @@
         It supports multiple language servers, including: Verible, Svls and custom LSPs.
     </description>
 
-    <idea-version since-build="231.0"/>
+    <idea-version since-build="241.0"/>
 
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.ultimate</depends>

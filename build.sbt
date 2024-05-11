@@ -1,4 +1,4 @@
-import org.jetbrains.sbtidea.Keys._
+import org.jetbrains.sbtidea.Keys.*
 
 lazy val pluginIntellijSystemVerilog =
   project.in(file("."))
