@@ -1,13 +1,10 @@
 <idea-plugin>
     <id>com.zhutmost.systemverilog</id>
     <name>SystemVerilog Plus by Zhutmost</name>
-    <version>0.0.3</version>
+    <version>determined by build.sbt</version>
     <vendor>zhutmost</vendor>
 
-    <description>
-        This plugin integrates SystemVerilog language servers (LSP) into Intellij IDEA, which enables Linting On the Fly, Go to Definition and other features.
-        It supports multiple language servers, including: Verible, Svls and custom LSPs.
-    </description>
+    <description>determined by build.sbt</description>
 
     <idea-version since-build="241.0"/>
 
